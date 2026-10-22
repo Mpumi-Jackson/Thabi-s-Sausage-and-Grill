@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#191715">
+  <title>Private order inbox | Thabi's Sausage and Grill</title>
+  <link rel="stylesheet" href="/css/site.css">
+  <script type="module" src="/js/admin.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#admin-main">Skip to inbox</a>
+  <header class="site-header admin-header">
+    <a class="brand" href="/"><img src="/Images/Logo.jpeg" alt="" width="48" height="48"><span>Thabi's <strong>Sausage &amp; Grill</strong></span></a>
+    <a class="text-link" href="/">← Back to storefront</a>
+  </header>
+  <main id="admin-main" class="admin-main">
+    <section class="admin-login" id="login-panel">
+      <p class="eyebrow">Private business area</p>
+      <h1>Order <span>inbox</span></h1>
+      <p class="muted">Sign in to review orders saved for the business. Never share these login details with customers.</p>
+      <form id="login-form" class="checkout-form">
+        <label class="field"><span>Username</span><input name="username" autocomplete="username" required></label>
+        <label class="field"><span>Password</span><input name="password" type="password" autocomplete="current-password" required></label>
+        <p class="form-message" id="login-error" role="alert" hidden></p>
+        <button class="button button-primary button-full" type="submit">Sign in</button>
+      </form>
+    </section>
+    <section id="inbox-panel" hidden>
+      <div class="inbox-heading">
+        <div><p class="eyebrow">Private business area</p><h1>Recent <span>orders</span></h1><p class="muted">Latest 100 orders saved in the business database.</p></div>
+        <div class="inbox-actions"><button class="button button-secondary" id="refresh-orders" type="button">Refresh inbox</button><button class="button button-text" id="sign-out" type="button">Sign out</button></div>
+      </div>
+      <p class="form-message" id="inbox-error" role="alert" hidden></p>
+      <div id="order-list" class="order-list"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><p class="footer-meta">Private business information. Always sign out when using a shared device.</p></footer>
+</body>
+</html>

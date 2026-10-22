@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#191715">
+  <meta name="description" content="Browse the Thabi's Sausage and Grill sample menu and contact the South African food business.">
+  <title>Thabi's Sausage and Grill | A South African grill</title>
+  <link rel="stylesheet" href="/css/site.css">
+  <script type="module" src="/js/store.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Thabi's Sausage and Grill home">
+      <img src="/Images/Logo.jpeg" alt="" width="48" height="48">
+      <span>Thabi's <strong>Sausage &amp; Grill</strong></span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Toggle navigation</span>
+      <span aria-hidden="true">☰</span>
+    </button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <a data-route="home" href="#home">Home</a>
+      <a data-route="menu" href="#menu">Menu</a>
+      <a data-route="about" href="#about">Our story</a>
+      <a data-route="contact" href="#contact">Contact</a>
+      <a class="cart-nav" data-route="cart" href="#cart">Your order <span id="cart-count" class="cart-count" aria-label="0 items">0</span></a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page home-page" data-page="home" aria-labelledby="hero-title">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span> South African grill favourites</p>
+          <h1 id="hero-title">Good food.<br><span>Good company.</span></h1>
+          <p class="hero-description">Explore a sample menu inspired by the burgers, boerewors rolls and grill favourites featured on our site.</p>
+          <p class="sample-notice" id="home-menu-notice"><strong>Menu preview:</strong> these sample items and prices are illustrative, not a confirmed menu. Online orders are not open yet.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#menu">Explore the menu <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#about">Get to know us</a>
+          </div>
+          <div class="hero-note"><span aria-hidden="true">🔥</span> Made for the moment around the grill.</div>
+        </div>
+        <div class="hero-image-wrap">
+          <img class="hero-image" src="/images/hero.jpg" alt="A Thabi's Sausage and Grill food truck" fetchpriority="high">
+          <div class="image-caption"><span class="caption-mark" aria-hidden="true">✳</span><span>Thabi's Sausage<br>and Grill</span></div>
+        </div>
+        <span class="hero-spark hero-spark-one" aria-hidden="true">✳</span>
+        <span class="hero-spark hero-spark-two" aria-hidden="true">✳</span>
+      </div>
+
+      <div class="section-heading">
+        <div><p class="eyebrow">From the grill</p><h2>A taste of the menu</h2></div>
+        <a class="text-link" href="#menu">See all sample items <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="product-grid featured-grid" id="featured-products" aria-live="polite"></div>
+    </section>
+
+    <section class="page menu-page" data-page="menu" aria-labelledby="menu-title" hidden>
+      <div class="page-heading">
+        <p class="eyebrow">Fresh off the grill</p>
+        <h1 id="menu-title">The <span>menu</span></h1>
+        <p id="menu-subtitle">Take a look around and add sample items to your basket.</p>
+      </div>
+      <div class="sample-banner" id="menu-notice" role="status"></div>
+      <div class="category-list" id="category-list" role="group" aria-label="Filter menu by category"></div>
+      <p class="form-message" id="menu-error" role="alert" hidden></p>
+      <div class="product-grid" id="menu-products" aria-live="polite"></div>
+    </section>
+
+    <section class="page cart-page" data-page="cart" aria-labelledby="cart-title" hidden>
+      <div class="page-heading">
+        <p class="eyebrow">A little something good</p>
+        <h1 id="cart-title">Your <span>basket</span></h1>
+        <p id="cart-subtitle">Adjust your sample order below. No order is sent until you choose to submit it.</p>
+      </div>
+      <div class="checkout-layout">
+        <div>
+          <div id="cart-lines" class="cart-lines"></div>
+          <a class="text-link back-link" id="back-to-menu" href="#menu">← Back to sample menu</a>
+        </div>
+        <aside class="summary-card" aria-labelledby="cart-summary-title">
+          <h2 id="cart-summary-title">Order summary</h2>
+          <div class="summary-row"><span>Sample subtotal</span><strong id="cart-subtotal">R 0,00</strong></div>
+          <p class="muted small">Delivery costs, if offered, are not included.</p>
+          <p class="sample-flag">Illustrative prices only</p>
+          <a class="button button-primary button-full" id="checkout-link" href="#checkout">Continue to checkout <span aria-hidden="true">→</span></a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page checkout-page" data-page="checkout" aria-labelledby="checkout-title" hidden>
+      <div class="page-heading">
+        <p class="eyebrow">One more step</p>
+        <h1 id="checkout-title">Your <span>details</span></h1>
+        <p>Please provide the contact and fulfilment details for your order.</p>
+      </div>
+      <div class="checkout-layout">
+        <form class="checkout-form" id="checkout-form">
+          <div class="sample-banner" id="checkout-notice" role="status"></div>
+          <div class="form-fields">
+            <label class="field">
+              <span>Your name</span>
+              <input name="name" type="text" autocomplete="name" minlength="2" maxlength="100" required>
+            </label>
+            <label class="field">
+              <span>South African contact number</span>
+              <input name="phone" type="tel" autocomplete="tel" inputmode="tel" placeholder="e.g. 082 123 4567" pattern="(?:\+27|0)\s*[1-8](?:\s*[0-9]){8}" maxlength="16" required aria-describedby="phone-help">
+              <small id="phone-help">Enter a local number starting with 0 or an international number starting with +27.</small>
+            </label>
+            <label class="field">
+              <span>How would you like your order?</span>
+              <select name="fulfillment" id="fulfillment">
+                <option value="collection">Collection</option>
+              </select>
+            </label>
+            <label class="field" id="address-field" hidden>
+              <span>Delivery address</span>
+              <textarea name="address" rows="3" maxlength="250" autocomplete="street-address"></textarea>
+              <small id="delivery-area-note"></small>
+            </label>
+            <label class="field">
+              <span>Instructions <span class="muted">(optional)</span></span>
+              <textarea name="instructions" rows="3" maxlength="500" placeholder="Anything the grill team should know?"></textarea>
+              <small>Maximum 500 characters.</small>
+            </label>
+          </div>
+          <p class="form-message" id="checkout-error" role="alert" hidden></p>
+          <button class="button button-primary button-full" id="submit-order" type="submit">Place order <span aria-hidden="true">→</span></button>
+          <p class="muted small form-footnote">Your contact details are sent securely for order processing. Please don't include payment card details in your instructions.</p>
+        </form>
+        <aside class="summary-card" aria-labelledby="checkout-summary-title">
+          <h2 id="checkout-summary-title">Your order</h2>
+          <div id="checkout-items" class="checkout-items"></div>
+          <div class="summary-row summary-total"><span>Sample total</span><strong id="checkout-total">R 0,00</strong></div>
+          <p class="sample-flag">This total is an example, not a confirmed quote.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="page confirmation-page" data-page="confirmation" aria-labelledby="confirmation-title" hidden>
+      <div class="confirmation-card" id="confirmation-content">
+        <p class="eyebrow">Order update</p>
+        <h1 id="confirmation-title">Your order was <span>received.</span></h1>
+        <p class="success-copy" id="confirmation-reference"></p>
+        <p id="confirmation-date" class="muted"></p>
+        <div id="confirmation-items" class="confirmation-items"></div>
+        <div class="summary-row summary-total"><span>Order total</span><strong id="confirmation-total">R 0,00</strong></div>
+        <p class="sample-flag">These are the details successfully saved for the business. Please contact the team to confirm current prices and collection arrangements.</p>
+        <a class="button button-primary" href="#menu">Back to menu</a>
+      </div>
+    </section>
+
+    <section class="page about-page" data-page="about" aria-labelledby="about-title" hidden>
+      <div class="about-layout">
+        <img src="/Images/Logo.jpeg" alt="Thabi's Sausage and Grill logo" width="200" height="200">
+        <div>
+          <p class="eyebrow">A local grill</p>
+          <h1 id="about-title">About <span>Thabi's</span></h1>
+          <p>Thabi's Sausage and Grill is a South African food business. Its existing menu mentions burgers, kota, boerewors rolls, fries, pap n vleis specials, dagwood and a vegan special.</p>
+          <p>We're building this page around the food and photos already shared by the business, without adding an unverified history or claims.</p>
+          <a class="button button-primary" href="#menu">Browse the sample menu <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page contact-page" data-page="contact" aria-labelledby="contact-title" hidden>
+      <div class="page-heading">
+        <p class="eyebrow">We'd love to hear from you</p>
+        <h1 id="contact-title">Get in <span>touch</span></h1>
+        <p>Contact details shown here are configurable for the business. Please confirm the current location and hours before visiting.</p>
+      </div>
+      <div class="contact-grid">
+        <article class="contact-card">
+          <span class="contact-icon" aria-hidden="true">☎</span>
+          <h2>Give us a call</h2>
+          <a id="contact-phone" href="#contact"></a>
+        </article>
+        <article class="contact-card">
+          <span class="contact-icon" aria-hidden="true">↗</span>
+          <h2>WhatsApp</h2>
+          <a id="contact-whatsapp" href="#contact"></a>
+        </article>
+        <article class="contact-card">
+          <span class="contact-icon" aria-hidden="true">◎</span>
+          <h2>Instagram</h2>
+          <a id="contact-instagram" href="#contact"></a>
+        </article>
+      </div>
+      <div class="contact-note">
+        <h2>Location &amp; hours</h2>
+        <p id="contact-location">Collection location: please contact us to confirm.</p>
+        <p id="contact-hours">Opening hours: please contact us to confirm.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home">Thabi's <strong>Sausage &amp; Grill</strong></a>
+    <p>Good food, rooted in the South African grill tradition.</p>
+    <p class="footer-meta" id="footer-note">Menu details and prices must be confirmed by the business before online orders open.</p>
+    <span id="footer-year"></span>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

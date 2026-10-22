@@ -1,6 +1,44 @@
 services:
   - type: web
     name: thabis-sausage-and-grill
-    runtime: static
-    buildCommand: ""
-    staticPublishPath: .
+    runtime: node
+    plan: starter
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: thabis-orders
+          property: connectionString
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_SESSION_SECRET
+        generateValue: true
+      - key: MENU_CONFIRMED
+        value: "false"
+      - key: DELIVERY_ENABLED
+        value: "false"
+      - key: DELIVERY_SERVICE_AREA
+        value: ""
+      - key: BUSINESS_LOCATION
+        value: ""
+      - key: BUSINESS_HOURS
+        value: ""
+      - key: CONTACT_PHONE
+        value: "068 038 0071"
+      - key: CONTACT_WHATSAPP
+        value: "084 533 4451"
+      - key: CONTACT_INSTAGRAM
+        value: "@Thabang_phala"
+
+databases:
+  - name: thabis-orders
+    databaseName: thabis_orders
+    user: thabis_owner
+    plan: basic-256mb
+    ipAllowList: []

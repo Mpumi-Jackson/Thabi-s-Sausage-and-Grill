@@ -1,0 +1,19 @@
+{
+  "name": "thabis-sausage-and-grill",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Thabi's Sausage and Grill online ordering website",
+  "type": "module",
+  "engines": {
+    "node": ">=22.9 <25"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server.js",
+    "test": "node --test",
+    "check": "node --check server.js && node --check src/orders.js && node --check public/js/store.js && node --check public/js/admin.js && node --check data/menu.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}

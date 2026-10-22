@@ -1,1 +1,5 @@
 Thabi's Sausage and Grill.zip
+node_modules/
+.env
+.env.*
+!.env.example
