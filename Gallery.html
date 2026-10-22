@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Thabi's Sausage and Grill</title>
+    <link rel="stylesheet" href="Styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* warm gradient background */
+            color: #333;
+        }
+
+        h1 {
+            background-color: #e85c41; /* warm earthy orange-red */
+            color: white;
+            padding: 12px;
+            margin: 15px 0;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            flex-basis: calc(33.333% - 20px);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        img, video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        p, li {
+            font-size: 16px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #2d2d2d;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            background: #f7a440; /* Warm golden-orange */
+            color: white;
+            padding: 8px 14px;
+            border-radius: 6px;
+            margin: 0 8px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #e76f51; /* Darker warm orange on hover */
+        }
+
+        .Footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #fff;
+            background: #e85c41;
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex-basis: 100%;
+            }
+
+            nav a {
+                display: block;
+                margin-bottom: 10px;
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gallery</h1>
+        
+        <div class="gallery">
+            <!-- Gallery Item 1: Image -->
+            <div class="gallery-item">
+                <img src="Images/Logo.jpeg" alt="Thabi's Sausage and Grill Logo">
+                <p>The business has been established with the intention of making profit in the food sector.</p>
+            </div>
+
+            <!-- Gallery Item 2: Image -->
+            <div class="gallery-item">
+                <img src="Images/IMG_0987.JPG" alt="Product Image 1">
+                <p>Thabi’s Sausage and Grill offers a wide range of food products:</p>
+                <ul>
+                    <li>Burgers</li>
+                    <li>Kota’s</li>
+                    <li>Boerewors Rolls</li>
+                    <li>Fries</li>
+                    <li>Pap n Vleis (only served as a special)</li>
+                    <li>Dagwood</li>
+                    <li>Vegan Special (on Thursday)</li>
+                </ul>
+            </div>
+
+            <!-- Gallery Item 3: Video -->
+            <div class="gallery-item">
+                <video controls>
+                    <source src="Videos/Event.mov" type="video/quicktime">
+                    Your browser does not support the video tag.
+                </video>
+                <p>Watch our event videos!</p>
+            </div>
+
+            <!-- Gallery Item 4: Image -->
+            <div class="gallery-item">
+                <img src="Images/IMG_1008.JPG" alt="Product Image 3">
+            </div>
+
+            <!-- Gallery Item 5: Image -->
+            <div class="gallery-item">
+                <img src="Images/IMG_2295.JPG" alt="Product Image 4">
+            </div>
+
+            <!-- Gallery Item 6: Video -->
+            <div class="gallery-item">
+                <video controls>
+                    <source src="Videos/copy_7CA9E7C7-7F9A-42DC-A586-E2C59884FA9F.mov" type="video/quicktime">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Gallery Item 7: Video -->
+            <div class="gallery-item">
+                <video controls>
+                    <source src="Videos/HC Friends Like Me event.mov" type="video/quicktime">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Gallery Item 8: Video -->
+            <div class="gallery-item">
+                <video controls>
+                    <source src="Videos/HC friends Like Me.mov" type="video/quicktime">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Gallery Item 9: Video -->
+            <div class="gallery-item">
+                <video controls>
+                    <source src="Videos/highlight clip.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Gallery Item 10: Image -->
+            <div class="gallery-item">
+                <img src="Images/Burger.JPG" alt="Product Image 5">
+            </div>
+        </div>
+
+        <nav>
+            <a href="Thabi's Sausage and Grill.html">Introduction</a>
+            <a href="Home.html">Home</a>
+            <a href="Products and Services.html">Products and Services</a>
+            <a href="About Us.html">About Us</a>
+            <a href="Contact Us.html">Contact Us</a>
+        </nav>
+
+        <div class="Footer">
+            <p>&copy; 2024 Thabi's Sausage and Grill. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

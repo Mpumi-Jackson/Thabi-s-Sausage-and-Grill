@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: thabis-sausage-and-grill
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .

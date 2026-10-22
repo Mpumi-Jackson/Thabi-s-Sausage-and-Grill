@@ -1,0 +1,82 @@
+<!-- order.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Your Order</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: white;
+      background: #e85c41;
+      padding: 12px;
+      border-radius: 8px;
+    }
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+      background: rgba(255,255,255,0.9);
+      padding: 20px;
+      border-radius: 10px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 10px 0 5px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background: #f7a440;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #e76f51;
+    }
+  </style>
+</head>
+<body>
+  <h1>Place Your Order</h1>
+  <form action="mailto:your@email.com" method="post" enctype="text/plain">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="item">Select Item:</label>
+    <select id="item" name="item" required>
+      <option value="Burger">Burger</option>
+      <option value="Kota">Kota</option>
+      <option value="Boerewors Roll">Boerewors Roll</option>
+      <option value="Fries">Fries</option>
+      <option value="Pap n Vleis">Pap n Vleis</option>
+      <option value="Dagwood">Dagwood</option>
+      <option value="Vegan Special">Vegan Special</option>
+    </select>
+
+    <label for="message">Special Instructions:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">Submit Order</button>
+  </form>
+</body>
+</html>

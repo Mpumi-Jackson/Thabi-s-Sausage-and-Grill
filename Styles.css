@@ -1,0 +1,77 @@
+        body {
+            
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #7ab86b92;
+        }
+        h1 {
+            color: #333;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: SlateBlue;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 5px rgb(26, 216, 121);
+        }
+        h2 {
+            color: #333;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: DodgerBlue;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 5px red;
+        }
+        p {
+            font-size: 16px;
+            font-family: Cambria, Georgia, 'Times New Roman', serif;
+            line-height: 1.5;
+            margin: 15px 0;
+        }
+        
+        ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+        ul li {
+            font-size: 16px;
+            font-family: Cambria, Georgia, 'Times New Roman', serif;
+            margin: 5px 0;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #007BFF;
+            margin-right: 15px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .about-us-text {
+            border: 1px solid #0910e0;
+            padding: 10px;
+          }
+          .product-info {
+            outline: 2px dashed #FF5733; /* Dashed outline with a specific color */
+            padding: 10px; /* Optional: Adds padding inside the paragraph */
+            margin-bottom: 15px; /* Optional: Adds space between each paragraph */
+        }
+        
+          
